@@ -1,13 +1,264 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&family=Nunito&family=Nunito+Sans:wght@400;600&family=Poppins:ital,wght@0,400;0,500;1,300;1,400&family=Questrial&family=Raleway&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Testing on phone offline */
+@font-face {
+  font-family: myFont;
+  src: url("../public/Questrial-Regular.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  @apply scroll-smooth;
+}
+
+*::-webkit-scrollbar {
+  @apply w-[5px] h-[5px];
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded bg-slate-400;
+}
+
+*::-webkit-scrollbar-track {
+  @apply !bg-transparent;
+}
+
+body {
+  @apply font-questrial bg-main-bg text-slate-700 dark:bg-main-dark dark:text-slate-300;
+  font-family: myFont;
+}
+
+/* General styles */
+p,
+a,
+svg {
+  @apply text-muted;
+}
+
+a.btn {
+  @apply opacity-100;
+}
+
+footer a {
+  @apply text-sm transition-a;
+}
+
+footer a:hover {
+  @apply ml-2 text-primary;
+}
+
+.heading {
+  @apply text-3xl font-bold capitalize text-secondary dark:text-slate-300;
+}
+
+.sub-heading {
+  @apply text-primary text-sm uppercase w-fit bg-primary/20 px-3 py-[3px] rounded-full mb-3 max-w-[200px];
+}
+
+.image {
+  @apply group-hover:scale-125 transition-a;
+}
+
+.card {
+  @apply p-4 bg-white border rounded-lg dark:bg-card-dark dark:border-dark;
+}
+
+.card-bordered {
+  @apply border dark:border-dark;
+}
+
+.btn {
+  @apply px-4 py-[0.35rem] rounded-lg transition-a sm:cursor-pointer !uppercase flex-shrink-0;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-[#f7751e] shadow-md shadow-primary/60;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-[#02293e];
+}
+
+.icon-box {
+  @apply grid flex-shrink-0 rounded-full w-9 h-9 place-items-center hover:bg-slate-200 dark:hover:bg-hover-color-dark transition-a sm:cursor-pointer;
+}
+
+.border {
+  @apply border-[#d2d2d2]/40;
+}
+
+.input {
+  @apply border !border-slate-300 dark:!border-dark bg-transparent px-4 py-[0.35rem] outline-none focus:!border-primary;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  @apply hidden;
+}
+/* Back to top button */
+.back-to-top-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+a.active {
+  @apply relative text-primary before:absolute before:w-full before:h-[2px] before:bg-primary before:left-0 before:bottom-0 lg:before:-bottom-[0.1rem];
+}
+
+.dropdown a.active {
+  @apply before:bottom-0;
+}
+
+.dropdown {
+  @apply z-40 -translate-x-1/2 before:rotate-45 before:absolute before:bg-inherit before:-top-2 before:left-1/2;
+}
+
+/* Filter dialog and modal */
+.filter-modal {
+  @apply fixed top-0 left-0 z-50 w-full h-full transition-opacity opacity-0 pointer-events-none bg-black/50 md:static md:opacity-100 md:pointer-events-auto md:bg-transparent;
+}
+
+.filter-dialog {
+  @apply absolute right-0  p-3 md:p-0 bg-white dark:bg-card-dark h-screen max-w-[300px] translate-x-[500px] w-full max-h-screen overflow-auto transition-transform md:static md:max-w-full md:translate-x-0 md:max-h-fit md:h-fit md:bg-main-bg md:dark:!bg-main-dark;
+}
+
+.mobile-modal.open,
+.filter-modal.open,
+.mobile-dialog.open,
+.filter-dialog.open {
+  @apply translate-x-0 opacity-100 pointer-events-auto;
+}
+
+.modal.open,
+.dialog.open {
+  @apply translate-x-0 opacity-100 pointer-events-auto;
+}
+
+.test-color {
+  color: #353949;
+}
+
+.dropdown.show {
+  @apply block;
+}
+
+/* Loader */
+.loader {
+  @apply w-20 h-20 border-4 rounded-full border-primary;
+  border-block-start-color: transparent;
+  animation: rotate 1s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------PAGINATION---------------------- */
+.wb-pagination {
+  @apply flex-align-center sm:flex-center-center mt-4 w-full px-4 select-none max-w-[300px] sm:max-w-fit overflow-auto mx-auto;
+}
+
+.wb-pagination::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.wb-pagination .pagination-item {
+  @apply p-2;
+}
+
+.wb-pagination .pagination-item .pagination-link {
+  @apply grid w-8 h-8 mx-3 text-sm text-inherit place-items-center;
+}
+
+.wb-pagination .prev,
+.wb-pagination .next {
+  @apply inline-flex text-primary;
+}
+
+.wb-pagination .prev {
+  @apply mr-4;
+}
+.wb-pagination .next {
+  @apply ml-4;
+}
+
+.disabled {
+  @apply opacity-40;
+}
+
+.wb-pagination .pagination-item.pagination-link-active .pagination-link {
+  @apply text-white rounded-lg shadow-md bg-primary shadow-primary/60;
+}
+
+.test-color {
+  color: rgba(213, 211, 211, 0.192);
+}
+
+/* Testimonial slides */
+.activeSlide {
+  @apply translate-x-0 opacity-100;
+}
+.lastSlide {
+  @apply -translate-x-full opacity-100;
+}
+.nextSlide {
+  @apply translate-x-full opacity-100;
+}
+
+/* Filter */
+.filter {
+  @apply w-full px-3 py-2 border outline-none dark:border-dark bg-slate-100 dark:bg-dark-light;
+}
+
+/* Check box & radio box */
+.input-check label,
+.input-radio label {
+  @apply relative flex items-center cursor-pointer select-none;
+}
+
+.input-check input[type="checkbox"],
+.input-radio input[type="radio"] {
+  @apply absolute opacity-0 cursor-pointer;
+}
+
+.input-check label::before {
+  content: "";
+  @apply w-4 h-4 mr-2 border rounded border-primary;
+}
+
+.input-check input[type="checkbox"]:checked + label::before {
+  content: "✔";
+  @apply grid place-items-center text-slate-100 text-[0.7rem] bg-primary;
+}
+
+.input-radio label::before {
+  content: "";
+  @apply w-4 h-4 mr-2 rounded-full border !border-primary;
+}
+.input-radio label::after {
+  content: "";
+  @apply absolute w-2 h-2 top-1/2 left-0 -translate-y-1/2 scale-0 ml-[0.25rem] bg-primary transition-a rounded-full;
+}
+
+.input-radio input[type="radio"]:checked + label::after {
+  @apply scale-100 -translate-y-1/2;
+}
+
+/* Accordion */
+.accordion.active {
+  @apply text-primary;
+}
+
+.isOpen {
+  @apply max-h-screen p-4;
 }
