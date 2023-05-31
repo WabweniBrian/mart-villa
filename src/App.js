@@ -35,7 +35,7 @@ import NewsLetter from "./components/common/NewsLetter";
 import Loader from "./components/common/Loader";
 function App() {
   const [showButton, setShowButton] = useState(false);
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
   const dispatch = useDispatch();
   const route = useLocation();
 
