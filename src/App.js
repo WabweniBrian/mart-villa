@@ -52,7 +52,6 @@ function App() {
 
   return (
     <div>
-      {/* {showLoader && <Loader />} */}
       <Navbar />
       <Dropdown />
       <div
