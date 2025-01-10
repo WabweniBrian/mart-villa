@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { navLinks } from "../../../Property-Listings/src/data/navLinks";
+import { navLinks } from "../data/navLinks";
 
 const mode = JSON.parse(localStorage.getItem("Martvilla-theme-mode")) || false;
 
