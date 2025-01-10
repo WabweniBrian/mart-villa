@@ -4,7 +4,7 @@ import { property } from "../data/dummyData";
 
 const PropertyTwo = () => {
   return (
-    <div className="pt-20 px-[3%] md:px-[6%]">
+    <div className="pt-20 max-w-7xl mx-auto px-4">
       <PropertyList />
       <Pagination itemsPerPage={9} pageData={property} />
     </div>

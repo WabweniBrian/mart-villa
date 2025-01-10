@@ -3,7 +3,7 @@ import { Brands, Feeds, WhatWeDo } from "../components/common/page-componets";
 
 const AboutTwo = () => {
   return (
-    <div className="pt-20 px-[3%] md:px-[6%]">
+    <div className="pt-20 max-w-7xl mx-auto px-4">
       <Stats />
       <OverView />
       <Brands />

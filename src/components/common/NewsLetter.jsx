@@ -2,7 +2,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 const NewsLetter = () => {
   return (
-    <div className="flex flex-wrap -mt-24 bg-primary h-fit sm:h-[250px] rounded-xl py-4 text-slate-100">
+    <div className="flex flex-wrap -mt-24 bg-primary h-fit sm:h-[250px] rounded-xl py-4 text-slate-100 max-w-7xl mx-auto px-4">
       <div className="flex-1 basis-[20rem]">
         <img
           src="/images/3d-house.png"

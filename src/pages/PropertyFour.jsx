@@ -6,7 +6,7 @@ import { property } from "../data/dummyData";
 
 const PropertyFour = () => {
   return (
-    <div className="pt-20 px-[3%] md:px-[6%]">
+    <div className="pt-20 max-w-7xl mx-auto px-4">
       <PropertyGridList textLength={120} showLabels />
       <Pagination itemsPerPage={6} pageData={property} />
     </div>

@@ -32,10 +32,8 @@ import {
 import { closeDropdown } from "./features/uiSlice";
 import Dropdown from "./components/common/DropDown";
 import NewsLetter from "./components/common/NewsLetter";
-import Loader from "./components/common/Loader";
 function App() {
   const [showButton, setShowButton] = useState(false);
-  const [showLoader, setShowLoader] = useState(true);
   const dispatch = useDispatch();
   const route = useLocation();
 
@@ -52,14 +50,9 @@ function App() {
     window.scrollTo(0, 0);
   }, [route]);
 
-  // Loader when page is loading
-  window.addEventListener("load", () => {
-    setShowLoader(false);
-  });
-
   return (
     <div>
-      {showLoader && <Loader />}
+      {/* {showLoader && <Loader />} */}
       <Navbar />
       <Dropdown />
       <div

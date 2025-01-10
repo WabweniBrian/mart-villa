@@ -19,7 +19,7 @@ const HomeThree = () => {
     <div className="md:pt-[5.2rem] pt-10">
       <Hero />
       <Filters />
-      <div className="mt-10 px-[3%] md:px-[6%]">
+      <div className="mt-10 max-w-7xl mx-auto px-4">
         <AboutUs />
         <WhatWeDo />
         <Featured />

@@ -16,7 +16,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="pt-16 px-[3%] md:px-[6%]">
+    <div className="pt-16 max-w-7xl mx-auto px-4">
       <Hero />
       <Filters />
       <Invest />

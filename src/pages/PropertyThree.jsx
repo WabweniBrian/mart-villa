@@ -6,7 +6,7 @@ import { property } from "../data/dummyData";
 
 const PropertyThree = () => {
   return (
-    <div className="pt-20 px-[3%] md:px-[6%]">
+    <div className="pt-20 max-w-7xl mx-auto px-4">
       <PropertyFullWidth />
       <Pagination itemsPerPage={6} pageData={property} />
     </div>

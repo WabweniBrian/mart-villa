@@ -4,7 +4,7 @@ import { teamMembers } from "../data/dummyData";
 
 const Team = () => {
   return (
-    <div className="pt-16 px-[3%] md:px-[6%]">
+    <div className="pt-16 max-w-7xl mx-auto px-4">
       <div className="grid grid-cols-1 gap-3 mt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {teamMembers.map(({ id, name, role, image }) => (
           <div className="h-[250px] w-full mb-16" key={id}>

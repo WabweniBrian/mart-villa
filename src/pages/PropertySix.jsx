@@ -26,7 +26,7 @@ const PropertySix = () => {
   const [layout, setLayout] = useState("list");
 
   return (
-    <div className="pt-20 px-[3%] md:px-[6%]">
+    <div className="pt-20 max-w-7xl mx-auto px-4">
       <HeadeFilters layout={layout} setLayout={setLayout} />
       <div className="grid mt-5 md:grid-cols-4 gap-x-14">
         <div className="top-0 mt-5 md:col-span-3 md:mt-0 h-fit md:sticky">

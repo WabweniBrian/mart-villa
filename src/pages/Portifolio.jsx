@@ -2,7 +2,7 @@ import PortifolioList from "../components/portifolio/PortifolioList";
 
 const Portifolio = () => {
   return (
-    <div className="pt-20 px-[3%] md:px-[6%]">
+    <div className="pt-20 max-w-7xl mx-auto px-4">
       <PortifolioList />
     </div>
   );

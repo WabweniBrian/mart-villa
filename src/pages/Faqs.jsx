@@ -3,7 +3,7 @@ import { NewsLetter } from "../components/services";
 
 const Faqs = () => {
   return (
-    <div className="pt-20 px-[3%] md:px-[6%]">
+    <div className="pt-20 max-w-7xl mx-auto px-4">
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
         <div className="md:col-span-2">
           <FaqsList />

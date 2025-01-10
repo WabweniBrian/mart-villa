@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className="text-slate-200">
       <footer>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 max-w-7xl mx-auto px-4">
           <div className="flex-1 basis-[10rem]">
             <Link to="/" className="flex-shrink-0 flex-align-center gap-x-1">
               <BiBuildingHouse className="text-3xl text-primary" />
@@ -121,7 +121,7 @@ const Footer = () => {
       </footer>
       <div className="py-2 mt-3 text-center border-t text-muted border-dark">
         <p>
-          Created By <span className="text-primary">Wabweni Brian</span> | All
+          Created By <span className="text-primary">Kisakye Martha</span> | All
           Rights Reserved
         </p>
       </div>

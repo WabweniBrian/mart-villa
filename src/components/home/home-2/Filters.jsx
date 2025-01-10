@@ -2,7 +2,7 @@ import { BiBriefcase, BiBuildings, BiMap, BiMoney } from "react-icons/bi";
 
 const Filters = () => {
   return (
-    <div className="md:max-w-[80%] w-full mx-auto relative -mt-16 sm:-mt-28">
+    <div className="md:max-max-w-7xl px-4 w-full mx-auto relative -mt-16 sm:-mt-28">
       <div className="bg-white card card-shadow dark:shadow-none">
         <h1 className="text-lg font-bold">Search the price your looking for</h1>
         <div className="z-40 flex-col mt-4 gap-x-4 flex-center-between gap-y-4 md:gap-y-0 md:flex-row ">
